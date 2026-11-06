@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cadastrar pessoa</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="container">
+  <h2>Cadastrar pessoa</h2>
+  <% if (error) { %><p class="error"><%= error %></p><% } %>
+  <form action="/show" method="POST">
+    <label>Nome <input type="text" name="name" required maxlength="120"></label>
+    <label>Sobrenome <input type="text" name="surname" required maxlength="120"></label>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <p><a href="/show">Ver registros</a></p>
+</main></body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Editar registro</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="container">
+  <h2>Editar registro</h2>
+  <% if (error) { %><p class="error"><%= error %></p><% } %>
+  <% const details = crud; %>
+    <form action="/edit/<%= details._id %>" method="POST">
+      <label>Nome <input type="text" value="<%= details.name %>" name="name" required maxlength="120"></label>
+      <label>Sobrenome <input type="text" value="<%= details.surname %>" name="surname" required maxlength="120"></label>
+      <button type="submit">Salvar alterações</button>
+    </form>
+
+  <p><a href="/show">Voltar aos registros</a></p>
+</main></body>
+</html>
